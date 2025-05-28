@@ -1,9 +1,14 @@
+import Section from "../Section/Section";
+import Container from "../Container/Container";
+import FormSection from "../FormSection/FormSection";
+
 function App() {
   return (
-    <>
-      <p>hello</p>
-      <p>new project</p>
-    </>
+    <Section>
+      <Container>
+        <FormSection></FormSection>
+      </Container>
+    </Section>
   );
 }
 
