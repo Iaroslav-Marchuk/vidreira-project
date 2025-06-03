@@ -42,9 +42,6 @@ const FormSection = () => {
     >
       {({ values }) => (
         <Form className={css.form}>
-          <button type="button" className={css.closeBtn}>
-            ×
-          </button>
           <div className={css.wrapper}>
             <fieldset className={css.fieldset}>
               <legend className={css.legend}>Local Info</legend>
@@ -228,7 +225,7 @@ const FormSection = () => {
                       </label>
 
                       <label className={css.label}>
-                        Observações{" "}
+                        Motivo{" "}
                         <Field
                           className={css.textarea}
                           type="text"
