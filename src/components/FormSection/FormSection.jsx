@@ -1,5 +1,4 @@
 import { Formik, Form, Field, FieldArray } from "formik";
-import { nanoid } from "nanoid";
 
 import css from "./FormSection.module.css";
 
@@ -16,7 +15,7 @@ const initialValues = {
         minute: "2-digit",
       }),
     },
-    id: `id-${nanoid()}`,
+
     EP: "",
     cliente: "",
     units: [
