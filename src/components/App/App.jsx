@@ -25,6 +25,7 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 import ModalOverlay from "../ModalOverlay/ModalOverlay";
 import Button from "../Button/Button";
+import Header from "../Header/Header";
 
 ModalLib.setAppElement("#root");
 
@@ -51,6 +52,7 @@ function App() {
   return (
     <Section>
       <Container>
+        <Header />
         <Toaster />
         <div>
           <Button type="button" onClick={openModal}>
