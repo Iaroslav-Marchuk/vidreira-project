@@ -6,13 +6,10 @@ axios.defaults.baseURL = "https://luck-plume-ease.glitch.me";
 export const fetchOrders = createAsyncThunk(
   "orders/fetchAll",
   async (_, thunkAPI) => {
-    console.log("➡️ ВІДПРАВЛЯЄМО ЗАПИТ: GET /orders"); // ✅
     try {
       const response = await axios.get("/orders");
-      console.log("✅ ОТРИМАНО ВІДПОВІДЬ:", response.data); // ✅
       return response.data;
     } catch (error) {
-      console.error("❌ ПОМИЛКА ЗАПИТУ:", error.message); // ✅
       return thunkAPI.rejectWithValue(error.message);
     }
   }

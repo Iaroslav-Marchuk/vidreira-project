@@ -5,7 +5,7 @@ import "react-tabs/style/react-tabs.css";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchOrders } from "../../redux/ordersOps";
+import { fetchOrders } from "../../redux/orders/operations";
 
 import OrderList from "../OrderList/OrderList";
 
@@ -13,7 +13,7 @@ import {
   // selectOrders,
   selectLoading,
   selectError,
-} from "../../redux/ordersSlice";
+} from "../../redux/orders/slice";
 
 import ModalLib from "react-modal";
 

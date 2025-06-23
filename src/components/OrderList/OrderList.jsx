@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectOrders } from "../../redux/ordersSlice";
+import { selectOrders } from "../../redux/orders/slice";
 
 import Order from "../Order/Order";
 import css from "./OrderList.module.css";

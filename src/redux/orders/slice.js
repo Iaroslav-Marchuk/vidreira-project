@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchOrders, addOrder, deleteOrder } from "./ordersOps";
+import { fetchOrders, addOrder, deleteOrder } from "./operations";
 
 const handlePending = (state) => {
   state.loading = true;
@@ -10,7 +10,7 @@ const handleRejected = (state, action) => {
   state.error = action.payload;
 };
 
-const slice = createSlice({
+const ordersSlice = createSlice({
   name: "orders",
   initialState: {
     items: [],
@@ -47,7 +47,7 @@ const slice = createSlice({
   },
 });
 
-export default slice.reducer;
+export default ordersSlice.reducer;
 
 export const selectOrders = (state) => state.orders.items;
 export const selectLoading = (state) => state.orders.loading;
