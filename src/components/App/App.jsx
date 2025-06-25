@@ -26,6 +26,8 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import ModalOverlay from "../ModalOverlay/ModalOverlay";
 import Button from "../Button/Button";
 import Header from "../Header/Header";
+import { Route, Routes } from "react-router-dom";
+import RegistrationPage from "../../pages/RegistrationPage/RegistrationPage";
 
 ModalLib.setAppElement("#root");
 
@@ -52,25 +54,42 @@ function App() {
   return (
     <Section>
       <Container>
-        <Header />
-        <Toaster />
-        <div>
-          <Button type="button" onClick={openModal}>
-            Fazer pedido
-          </Button>
-
-          <ModalOverlay isOpen={modalIsOpen} onClose={closeModal}>
-            <FormSection></FormSection>
-          </ModalOverlay>
-        </div>
-        <div>
-          {loading && <Loader />}
-          {error && <ErrorMessage />}
-          <OrderList />
-        </div>
+        <Routes>
+          {/* <Route path="/" element={<HomePage />} /> */}
+          <Route pasth="/register" element={<RegistrationPage />} />
+          {/* <Route path="/login" element={<LoginPage />} /> */}
+          {/* <Route path="/orders" element={<OrdersPage />} /> */}
+          {/* <Route path="/profile" element={<ProfilePage />} /> */}
+        </Routes>
       </Container>
     </Section>
   );
 }
 
 export default App;
+
+// return (
+//   <Section>
+//     <Container>
+//       <Header />
+//       <Toaster />
+//       <div>
+//         <Button type="button" onClick={openModal}>
+//           Fazer pedido
+//         </Button>
+
+//         <ModalOverlay isOpen={modalIsOpen} onClose={closeModal}>
+//           <FormSection></FormSection>
+//         </ModalOverlay>
+//       </div>
+//       <div>
+//         {loading && <Loader />}
+//         {error && <ErrorMessage />}
+//         <OrderList />
+//       </div>
+//     </Container>
+//   </Section>
+// );
+// }
+
+// export default App;
