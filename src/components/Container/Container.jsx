@@ -1,7 +1,13 @@
-import styled from "./Container.module.css";
+import Header from "../Header/Header";
+import css from "./Container.module.css";
 
 const Container = ({ children }) => {
-  return <div className={styled.container}>{children}</div>;
+  return (
+    <div className={css.container}>
+      <Header />
+      {children}
+    </div>
+  );
 };
 
 export default Container;
