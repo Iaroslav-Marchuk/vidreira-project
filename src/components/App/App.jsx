@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Container from "../Container/Container";
+import Layaut from "../Layaut/Layaut.jsx";
 import Section from "../Section/Section";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
@@ -15,7 +15,7 @@ const RegistrationPage = lazy(() =>
 const App = () => {
   return (
     <Section>
-      <Container>
+      <Layaut>
         <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -25,7 +25,7 @@ const App = () => {
             <Route path="/profile" element={<ProfilePage />} />
           </Routes>
         </Suspense>
-      </Container>
+      </Layaut>
     </Section>
   );
 };

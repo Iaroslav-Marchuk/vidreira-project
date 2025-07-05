@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <nav>
       <NavLink
-        className={({ isActive }) => clsx(css.link, isActive && css.isActive)}
+        className={({ isActive }) => clsx(css.link, isActive && css.active)}
         to="/"
       >
         Home
@@ -19,17 +19,13 @@ const Navigation = () => {
       {isLoggedIn && (
         <>
           <NavLink
-            className={({ isActive }) =>
-              clsx(css.link, isActive && css.isActive)
-            }
+            className={({ isActive }) => clsx(css.link, isActive && css.active)}
             to="/orders"
           >
             Pedidos
           </NavLink>
           <NavLink
-            className={({ isActive }) =>
-              clsx(css.link, isActive && css.isActive)
-            }
+            className={({ isActive }) => clsx(css.link, isActive && css.active)}
             to="/profile"
           >
             Profile

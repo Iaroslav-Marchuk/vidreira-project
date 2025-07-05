@@ -1,0 +1,12 @@
+.container {
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  color: #1f2937;
+  background: linear-gradient(180deg, #f7f9fc 0%, #e6ecf3 100%);
+}

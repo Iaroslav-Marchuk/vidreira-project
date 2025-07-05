@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
-import css from "./Container.module.css";
+import css from "./Layaut.module.css";
 
-const Container = ({ children }) => {
+const Layaut = ({ children }) => {
   return (
     <div className={css.container}>
       <Header />
@@ -10,4 +10,4 @@ const Container = ({ children }) => {
   );
 };
 
-export default Container;
+export default Layaut;
