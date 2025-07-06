@@ -14,7 +14,7 @@ const Navigation = () => {
         className={({ isActive }) => clsx(css.link, isActive && css.active)}
         to="/"
       >
-        Home
+        Início
       </NavLink>
       {isLoggedIn && (
         <>
@@ -28,7 +28,7 @@ const Navigation = () => {
             className={({ isActive }) => clsx(css.link, isActive && css.active)}
             to="/profile"
           >
-            Profile
+            Perfil do utilizador
           </NavLink>
         </>
       )}

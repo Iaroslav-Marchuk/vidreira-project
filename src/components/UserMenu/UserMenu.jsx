@@ -1,12 +1,12 @@
+import Button from "../Button/Button.jsx";
+
 import css from "./UserMenu.module.css";
 
 const UserMenu = () => {
   return (
     <div className={css.wrapper}>
-      {/* <p>Welcome, {userName}</p> */}
-      <button className={css.btn} type="button">
-        LogOut
-      </button>
+      <p>Olá, UserName</p>
+      <Button>Sair</Button>
     </div>
   );
 };

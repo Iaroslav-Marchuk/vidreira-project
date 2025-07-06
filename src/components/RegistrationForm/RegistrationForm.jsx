@@ -1,8 +1,12 @@
 import { Field, Form, Formik } from "formik";
-import css from "./RegistrationForm.module.css";
 import toast from "react-hot-toast";
 import { register } from "../../redux/auth/operations.js";
+
+import Button from "../Button/Button.jsx";
+
 import { useDispatch } from "react-redux";
+
+import css from "./RegistrationForm.module.css";
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
@@ -23,15 +27,15 @@ const RegistrationForm = () => {
     >
       <Form className={css.form}>
         <label className={css.label}>
-          Name
+          Nome
           <Field className={css.input} type="text" name="name" />
         </label>
 
         <label className={css.label}>
-          Role
+          Cargo
           <Field className={css.input} as="select" name="role">
             <option value="" disabled>
-              --
+              Escolha o seu cargo
             </option>
             <option value="corte">Corte</option>
             <option value="duplo">Duplo</option>
@@ -40,13 +44,11 @@ const RegistrationForm = () => {
         </label>
 
         <label className={css.label}>
-          Palavra-passe
+          Palavra passe
           <Field className={css.input} type="password" name="password" />
         </label>
 
-        <button className={css.btn} type="submit">
-          Register
-        </button>
+        <Button>Registar</Button>
       </Form>
     </Formik>
   );

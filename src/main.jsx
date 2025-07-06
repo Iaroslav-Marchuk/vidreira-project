@@ -8,7 +8,7 @@ import { store } from "./redux/store";
 import App from "./components/App/App";
 
 import "modern-normalize";
-import "./index.css";
+import "../src/styles/styles.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

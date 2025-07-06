@@ -1,9 +1,12 @@
 import { Field, Form, Formik } from "formik";
+import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
+
+import Button from "../Button/Button.jsx";
+
+import { login } from "../../redux/auth/operations.js";
 
 import css from "./LoginForm.module.css";
-import { useDispatch } from "react-redux";
-import toast from "react-hot-toast";
-import { login } from "../../redux/auth/operations.js";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -28,18 +31,16 @@ const LoginForm = () => {
     <Formik initialValues={{ name: "", password: "" }} onSubmit={handleSubmit}>
       <Form className={css.form} autoComplete="off">
         <label className={css.label}>
-          Name
+          Nome
           <Field className={css.input} type="text" name="name" />
         </label>
 
         <label className={css.label}>
-          Palavra-passe
+          Palavra passe
           <Field className={css.input} type="password" name="password" />
         </label>
 
-        <button className={css.btn} type="submit">
-          Login
-        </button>
+        <Button>Entrar</Button>
       </Form>
     </Formik>
   );

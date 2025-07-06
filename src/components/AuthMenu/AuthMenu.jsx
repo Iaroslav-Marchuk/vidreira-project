@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+
 import css from "./AuthMenu.module.css";
 import clsx from "clsx";
 
@@ -9,13 +10,13 @@ const AuthMenu = () => {
         to="/register"
         className={({ isActive }) => clsx(css.link, isActive && css.active)}
       >
-        Register
+        Registar
       </NavLink>
       <NavLink
         to="/login"
         className={({ isActive }) => clsx(css.link, isActive && css.active)}
       >
-        Login
+        Entrar
       </NavLink>
     </nav>
   );

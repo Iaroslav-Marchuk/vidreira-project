@@ -1,29 +1,26 @@
 nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 48px;
 }
 
 .link {
-  color: #bfb56d;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
+  color: var(--color-white);
+  border-radius: var(--border-radius);
   padding: 8px 16px;
-  border-radius: 8px;
   user-select: none;
-  background-color: transparent;
-  color: #bfdbfe;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  background-color: var(--color-btn);
+  box-shadow: var(--box-shadow);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background-color: var(--color-btn-hover);
 }
 
 .active {
-  background-color: #60a5fa;
-  color: #ffffff;
+  background-color: var(--color-btn-hover);
   font-weight: 700;
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
