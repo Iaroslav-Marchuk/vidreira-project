@@ -15,6 +15,7 @@ const RegistrationForm = () => {
     try {
       await dispatch(register(values)).unwrap();
       toast.success("Registered successfully!");
+
       actions.resetForm();
     } catch (error) {
       toast.error("Failed to register." + error);
@@ -39,7 +40,7 @@ const RegistrationForm = () => {
             </option>
             <option value="corte">Corte</option>
             <option value="duplo">Duplo</option>
-            <option value="guest">Visitante</option>
+            <option value="visitante">Visitante</option>
           </Field>
         </label>
 
@@ -48,7 +49,7 @@ const RegistrationForm = () => {
           <Field className={css.input} type="password" name="password" />
         </label>
 
-        <Button>Registar</Button>
+        <Button type="submit">Registar</Button>
       </Form>
     </Formik>
   );

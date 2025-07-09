@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import Layaut from "../Layaut/Layaut.jsx";
 import Section from "../Section/Section";
@@ -15,6 +16,7 @@ const RegistrationPage = lazy(() =>
 const App = () => {
   return (
     <Section>
+      <Toaster />
       <Layaut>
         <Suspense fallback={null}>
           <Routes>
