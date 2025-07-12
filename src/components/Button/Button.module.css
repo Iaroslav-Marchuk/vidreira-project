@@ -22,3 +22,13 @@
   background-color: var(--color-muted);
   cursor: not-allowed;
 }
+
+.delete {
+  background-color: #dc3545;
+  color: var(--color-white);
+}
+
+.delete:hover:not(:disabled),
+.delete:focus {
+  background-color: #c82333;
+}

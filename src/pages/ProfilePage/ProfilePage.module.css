@@ -1,0 +1,77 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 0px 20px;
+  background-color: var(--color-theme);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.wrapperLeftSide {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  font-size: 100px;
+  color: var(--color-white);
+  background-color: var(--color-muted);
+  border: 3px solid var(--color);
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+.list {
+  margin: 20px 0;
+  text-align: left;
+  display: inline-block;
+}
+
+.item {
+  background-color: var(--color-theme);
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.delete {
+  background-color: #dc3545;
+  color: var(--color-white);
+}
+
+.delete:hover:not(:disabled),
+.delete:focus {
+  background-color: #c82333;
+}

@@ -40,7 +40,7 @@ const LoginForm = () => {
           <Field className={css.input} type="password" name="password" />
         </label>
 
-        <Button>Entrar</Button>
+        <Button type="submit">Entrar</Button>
       </Form>
     </Formik>
   );
