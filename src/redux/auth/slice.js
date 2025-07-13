@@ -5,11 +5,11 @@ const authSlice = createSlice({
   name: "auth",
   initialState: {
     user: {
-      name: "",
-      role: "",
+      name: null,
+      role: null,
     },
 
-    isLoggedIn: true,
+    isLoggedIn: false,
     isRefreshing: false,
   },
   reducers: {},
@@ -24,7 +24,7 @@ const authSlice = createSlice({
         state.isLoggedIn = true;
       })
       .addCase(logout.fulfilled, (state) => {
-        state.user = { name: "", role: "" };
+        state.user = { name: null, role: null };
         state.isLoggedIn = false;
       });
   },

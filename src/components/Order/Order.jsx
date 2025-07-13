@@ -19,7 +19,7 @@ const Order = ({ order, index }) => {
               <th>Data</th>
             </tr>
           </thead>
-          <tbody>
+          {/* <tbody>
             {order.units.map((unit) => (
               <tr key={index}>
                 <td>{index}</td>
@@ -37,7 +37,7 @@ const Order = ({ order, index }) => {
                 <td>DATA</td>
               </tr>
             ))}
-          </tbody>
+          </tbody> */}
         </table>
       </div>
     </div>

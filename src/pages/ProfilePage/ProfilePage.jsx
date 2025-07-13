@@ -19,10 +19,18 @@ const ProfilePage = () => {
 
         <div className={css.wrapperRigthSide}>
           <ul className={css.list}>
-            <li className={css.item}>Name: UtilizadorName</li>
-            <li className={css.item}>Função: UtilizadorRole</li>
-            <li className={css.item}>Palavra-passe: Utilizador palavrapasse</li>
-            <li className={css.item}>Registado desde: 01-01-2025</li>
+            <li className={css.item}>
+              <strong>Name: </strong> UtilizadorName
+            </li>
+            <li className={css.item}>
+              <strong>Função: </strong> UtilizadorRole
+            </li>
+            <li className={css.item}>
+              <strong>Palavra-passe:</strong> Utilizador palavrapasse
+            </li>
+            <li className={css.item}>
+              <strong>Registado desde: </strong> 01-01-2025
+            </li>
           </ul>
         </div>
       </div>
