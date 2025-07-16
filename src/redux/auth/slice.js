@@ -9,7 +9,7 @@ const authSlice = createSlice({
       role: null,
     },
 
-    isLoggedIn: false,
+    isLoggedIn: true,
     isRefreshing: false,
   },
   reducers: {},

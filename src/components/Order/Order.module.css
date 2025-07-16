@@ -1,6 +1,6 @@
 .orderList {
   margin: 20px auto;
-  width: 1000px;
+  width: 1200px;
 }
 
 .ordertableWrapper {
@@ -24,7 +24,7 @@
 
 .table th,
 .table td {
-  padding: 12px 15px;
+  padding: 8px 4px;
   text-align: left;
   border: 1px solid #ddd;
   font-size: 14px;
