@@ -1,9 +1,13 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
 import Layaut from "../Layaut/Layaut.jsx";
 import Section from "../Section/Section";
+import { useDispatch, useSelector } from "react-redux";
+import { selectIsRefreshing } from "../../redux/auth/selectors.js";
+import PrivateRoute from "../PrivateRoute.jsx";
+import RestrictedRoute from "../RestrictedRoute.jsx";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 const LoginPage = lazy(() => import("../../pages/LoginPage/LoginPage"));
@@ -14,6 +18,13 @@ const RegistrationPage = lazy(() =>
 );
 
 const App = () => {
+  // const dispatch = useDispatch();
+  // const isRefreshing = useSelector(selectIsRefreshing);
+
+  // useEffect(() => {
+  //   dispatch(refreshUser());
+  // }, [dispatch]);
+
   return (
     <Section>
       <Toaster />
@@ -21,10 +32,33 @@ const App = () => {
         <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/register" element={<RegistrationPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/orders" element={<OrdersPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route
+              path="/register"
+              element={
+                <RestrictedRoute
+                  redirectTo="/profile"
+                  component={<RegistrationPage />}
+                />
+              }
+            />
+
+            <Route
+              path="/login"
+              element={
+                <RestrictedRoute
+                  redirectTo="/orders"
+                  component={<LoginPage />}
+                />
+              }
+            />
+            <Route
+              path="/profile"
+              element={<PrivateRoute component={<ProfilePage />} />}
+            />
+            <Route
+              path="/orders"
+              element={<PrivateRoute component={<OrdersPage />} />}
+            />
           </Routes>
         </Suspense>
       </Layaut>
@@ -33,6 +67,60 @@ const App = () => {
 };
 
 export default App;
+
+// function App() {
+//   const dispatch = useDispatch();
+//   const isRefreshing = useSelector(selectIsRefreshing);
+
+//   useEffect(() => {
+//     dispatch(refreshUser());
+//   }, [dispatch]);
+
+//   return isRefreshing ? (
+//     <strong>Refreshing user...</strong>
+//   ) : (
+//     <Layout>
+//       <Suspense fallback={null}>
+//         <Routes>
+//           <Route path="/" element={<HomePage />} />
+
+//           <Route
+//             path="/register"
+//             element={
+//               <RestrictedRoute
+//                 redirectTo="/profile"
+//                 component={<RegistrationPage />}
+//               />
+//             }
+//           />
+
+//           <Route
+//             path="/login"
+//             element={
+//               <RestrictedRoute
+//                 redirectTo="/contacts"
+//                 component={<LoginPage />}
+//               />
+//             }
+//           />
+
+//           <Route
+//             path="/contacts"
+//             element={<PrivateRoute component={<ContactsPage />} />}
+//           />
+
+//           <Route
+//             path="/profile"
+//             element={<PrivateRoute component={<ProfilePage />} />}
+//           />
+//         </Routes>
+//       </Suspense>
+//       <Toaster position="top-right" reverseOrder={false} />
+//     </Layout>
+//   );
+// }
+
+// export default App;
 
 // import css from "./App.module.css";
 
